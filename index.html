@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>PDF Master - Secure Document Tool</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 32px;
+            padding: 40px 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+        .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+        p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:active { transform: scale(0.98); }
+        .features {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: #888;
+            font-size: 12px;
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #10b981;
+        }
+        @media (prefers-color-scheme: dark) {
+            .card { background: #1e1e2e; }
+            h1 { color: #fff; }
+            p { color: #aaa; }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="icon">📄✨</div>
+    <h1>PDF Master</h1>
+    <p>Advanced document viewer with encryption support. Install as app for offline use.</p>
+    <button id="actionBtn">🔓 Open Secure Document</button>
+    <div class="features">
+        <span>🔐 AES Encrypted</span>
+        <span>⚡ Offline Mode</span>
+        <span>📱 PWA Ready</span>
+    </div>
+    <div id="status" class="status"></div>
+</div>
+
+<script src="detect.js"></script>
+</body>
+</html>
